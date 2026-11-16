@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#03040e">
+<title>Sadia AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="app">
+  <header>
+    <div class="logo"></div>
+    <div class="tt"><div class="brand">SADIA <b>AI</b></div><div class="online"><i></i>Online</div></div>
+    <div class="sp"></div>
+    <button class="pf" id="prof" aria-label="অ্যাকাউন্ট">👤</button>
+  </header>
+  <section id="greet"><div id="gl">শুভ দিন</div><div id="gs2">আজ কী করতে পারি তোমার জন্য?</div></section>
+  <section id="hero"><div id="stage"></div><div id="you"></div><div id="cap"></div></section>
+  <div id="sp"><span class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span id="st">প্রস্তুত</span></div>
+  <footer id="dock">
+    <button class="ic" id="langb" aria-label="ভাষা">BN</button>
+    <button class="ic" id="tasksb" aria-label="টাস্ক">📝</button>
+    <button id="mic" aria-label="কথা বলুন"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+    <button class="ic" id="camb" aria-label="ক্যামেরা">📷</button>
+    <button class="ic" id="gear" aria-label="সেটিংস">⚙</button>
+  </footer>
+</main>
+<video id="cam" playsinline muted hidden></video>
+<div class="sheet" id="langsheet" hidden></div>
+<div class="sheet" id="sheet" hidden>
+  <h3>সেটিংস</h3>
+  <label>Gemini API key<input id="key" type="password" placeholder="aistudio.google.com থেকে নেওয়া key" autocomplete="off"></label>
+  <div class="row"><label style="flex:1">কণ্ঠ<select id="voice"></select></label><label style="flex:1">ভাষা<select id="lang"></select></label></div>
+  <label class="chk"><input id="gs" type="checkbox"> Google Search (আজকের তথ্যের জন্য)</label>
+  <label>চুপ থাকলে নিজে বন্ধ হবে<select id="idle"><option value="60">১ মিনিট</option><option value="120">২ মিনিট</option><option value="300">৫ মিনিট</option><option value="0">কখনো না</option></select></label>
+  <div class="row"><button class="pri" id="ksave" style="flex:1">💾 সেভ</button><button id="restart" style="flex:1">🔄 নতুন কথোপকথন</button></div>
+  <button id="pmopen">🔐 অনুমতি ও ফোন নিয়ন্ত্রণ</button>
+  <button id="clearf">🧹 আমার সম্পর্কে মনে রাখা তথ্য মুছুন</button>
+  <small class="m" id="ver"></small>
+  <button id="sclose">✕ বন্ধ</button>
+</div>
+<div class="sheet" id="pmsheet" hidden>
+  <h3>🔐 অনুমতি</h3>
+  <small class="m">একবার দিলেই হবে। এগুলো ছাড়া সাদিয়া ফোন নিয়ন্ত্রণ করতে পারবে না।</small>
+  <button class="pri" id="pmall">সব সাধারণ অনুমতি দিন</button>
+  <div id="pmlist"></div>
+  <button id="pmdone">✔ শেষ</button>
+</div>
+<div class="sheet" id="psheet" hidden>
+  <h3>আমার প্রোফাইল</h3>
+  <div id="pinfo"></div>
+  <div id="gbtn2"></div>
+  <button id="signout" hidden>✏ নাম বদলান</button>
+  <button id="pclose">✕ বন্ধ</button>
+</div>
+<div class="sheet" id="tsheet" hidden>
+  <h3>📝 আমার টাস্ক</h3>
+  <div class="row"><input id="tin" type="text" placeholder="নতুন কাজ লিখুন..."><button class="pri" id="tadd">➕</button></div>
+  <div id="tlist"></div>
+  <button id="tclose">✕ বন্ধ</button>
+</div>
+<div id="login" hidden><div class="lbox"><div class="logo big"></div><h2>SADIA <b>AI</b></h2><p id="lp">তোমার কণ্ঠের সঙ্গী।</p><div id="gbtn"></div><button id="guest">পরে করব</button></div></div>
+<button id="upd" hidden>⬆️ নতুন আপডেট আছে</button>
+
+<script src="js/config.js"></script>
+<script src="js/avatar.js"></script>
+<script src="js/core.js"></script>
+<script src="js/device.js"></script>
+<script src="js/tasks.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/perms.js"></script>
+<script src="js/live.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
