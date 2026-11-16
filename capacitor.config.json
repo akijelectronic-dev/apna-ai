@@ -1,0 +1,12 @@
+{
+  "appId": "com.sadia.ai",
+  "appName": "Sadia AI",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https",
+    "url": "__SERVER_URL__"
+  },
+  "android": {
+    "allowMixedContent": false
+  }
+}
